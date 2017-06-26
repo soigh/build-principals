@@ -240,8 +240,14 @@
     <version>1.2.15.v201012070815</version>
 </dependency>
 
+<!-- https://mvnrepository.com/artifact/org.junit/com.springsource.org.junit -->
+<dependency>
+    <groupId>junit</groupId>
+    <artifactId>junit</artifactId>
+    <version>4.11</version>
+    <scope>test</scope>
+</dependency>
 </dependencies>
-
 
 </project>
 
