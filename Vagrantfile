@@ -78,11 +78,15 @@ Vagrant.configure("2") do |config|
         	wget https://raw.githubusercontent.com/MNT-Lab/git-tasks/yshchanouski-vtarasiuk/jenkins.service -a /var/log/wget.log
 		systemctl daemon-reload
 		systemctl enable jenkins.service
-		#systemctl start jenkins.service
+		systemctl start jenkins.service
 		#sleep 8s
 		#echo "Admin Password: " && cat /opt/jenkins/master/.jenkins/secrets/initialAdminPassword
 		#systemctl stop jenkins.service
-		cp -rf /home/vagrant/vb-share/master/* $JENKINS_HOME/
+		#sleep 3s
+		cp -rf /home/vagrant/vb-share/master.tar /opt/jenkins/
+		rm -rf /opt/jenkins/master
+		tar -xvf /opt/jenkins/master.tar -C /opt/jenkins
+		chown -R jenkins:jenkins /opt/jenkins/
 		systemctl start jenkins.service
 	else
 		echo "Jenkins already installed and configured and may be accessed via http://jenkins/"
