@@ -1,2 +1,2 @@
-# build-principals
+# Andrei Doropei
 src "hello world" to be built
