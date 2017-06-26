@@ -7,6 +7,5 @@
     <artifactId>hello</artifactId>
     <packaging>jar</packaging>
     <version>1.0</version>
-    <packaging>jar</packaging>
     <name>maven-home-task</name>
 </project>
