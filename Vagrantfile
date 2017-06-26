@@ -11,7 +11,7 @@ Vagrant.configure("2") do |config|
     jenkins.vm.network :forwarded_port, guest: 80, host: 8080, auto_correct: true
     jenkins.vm.network :forwarded_port, guest: 8080, host: 8090, auto_correct: true
     jenkins.vm.provider "virtualbox" do |v|
-	v.memory = "2048"
+	v.memory = "4096"
 	v.name = "jenkins"
     end
 
@@ -92,6 +92,26 @@ Vagrant.configure("2") do |config|
 		echo "Jenkins already installed and configured and may be accessed via http://jenkins/"
 		echo "Admin user=admin; admin password=123456"
 	fi
+
+	###MAVEN###
+	cd /opt/
+	wget http://ftp.byfly.by/pub/apache.org/maven/maven-3/3.5.0/binaries/apache-maven-3.5.0-bin.tar.gz
+	tar -xvf apache-maven-3.5.0-bin.tar.gz
+	export MAVEN_HOME=/opt/apache-maven-3.5.0
+	export MAVEN_BIN=$MAVEN_HOME/bin
+	export PATH=$MAVEN_BIN:$PATH
+	export MAVEN_OPTS="-Xms512m -Xmx1024m"
+	echo "export MAVEN_HOME=/opt/apache-maven-3.5.0" >>/etc/environment
+	echo "export MAVEN_BIN=$MAVEN_HOME/bin" >>/etc/environment
+	echo "export PATH=$MAVEN_BIN:$PATH" >>/etc/environment
+	echo 'export export MAVEN_OPTS="-Xms512m -Xmx1024m"' >>/etc/environment
+	
+	###some useful tools###
+	yum install git vim mlocate tree -y
+	git config --global user.name "Vadzim Tarasiuk"
+	git config --global user.mail "Vadzim_Tarasiuk@epam.com"
+	git config --global push.default current
+	#mvn dependency:tree && mvn dependency:tree
     SHELL
   end
 end
