@@ -38,6 +38,8 @@
 			<configuration>
 				<archive>
 					<manifest>
+						<addClasspath>true</addClasspath>
+						<classpathPrefix>lib/</classpathPrefix>
 						<mainClass>com.test.Project</mainClass>
 					</manifest>
 				</archive>
