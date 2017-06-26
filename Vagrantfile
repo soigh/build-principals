@@ -79,10 +79,10 @@ Vagrant.configure("2") do |config|
 		systemctl daemon-reload
 		systemctl enable jenkins.service
 		systemctl start jenkins.service
-		#sleep 8s
-		#echo "Admin Password: " && cat /opt/jenkins/master/.jenkins/secrets/initialAdminPassword
-		#systemctl stop jenkins.service
-		#sleep 3s
+		sleep 8s
+		echo "Admin Password: " && cat /opt/jenkins/master/.jenkins/secrets/initialAdminPassword
+		systemctl stop jenkins.service
+		sleep 3s
 		cp -rf /home/vagrant/vb-share/master.tar /opt/jenkins/
 		rm -rf /opt/jenkins/master
 		tar -xvf /opt/jenkins/master.tar -C /opt/jenkins
