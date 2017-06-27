@@ -13,6 +13,7 @@ task test (dependsOn: build, overwrite: true) {
 task archive ( type: Tar) {
 	doLast {
 	from 'build/libs'
+	basename = 'hello-'+${BUILD_NUMBER}
 	compression = Compression.GZIP
 	}
 }
