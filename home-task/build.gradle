@@ -17,6 +17,7 @@ task archive ( type: Tar) {
 	}
 }
 
+archive.dependsOn hello
 repositories {
     mavenCentral()
 }
