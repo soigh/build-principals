@@ -1,5 +1,15 @@
 apply plugin: 'java'
 
+task hello {
+    doLast {
+        println "hello"
+    }
+}
+
+test.dependsOn hello
+
+build.dependsOn test
+
 jar {
   manifest {
     attributes(
