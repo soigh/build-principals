@@ -9,19 +9,23 @@ dependencies {
 	compile group: 'org.apache.directory.studio', name: 'org.apache.commons.collections', version: '3.2.1'
 }
 
-task (DooM) {
+task hello (dependsOn: test){
 	doLast {
 		println "Welcome to your Nightmare!"
 	}
 }
 
-task archive ( type: Tar) {
-        from 'build'
-	compression = Compression.GZIP
-	copy {
-                from 'build/distributions/second-task.tgz'
-		into '.'
-             }
+task test (dependsOn: build, overwrite: true){
+	println "Testin 1,2,3"
+}
+
+task copy ( type: Copy){
+	from '/build/lib/'
+	into '.'
+}
+
+task archive ( type: Zip) {
+        from '/build/libs/'
 }
 
 jar {
