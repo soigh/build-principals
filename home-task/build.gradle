@@ -6,18 +6,17 @@ task hello {
     }
 }
 
-task generate(type: Jar) {
-    destFile = file('build/libs/home-task.jar')
-}
-
-artifacts {
-    archives file: generate.destFile, name: 'my-artifact', type: 'Jar', builtBy: generate
-}
-
 build.dependsOn test
 test.dependsOn hello
 
-// https://mvnrepository.com/artifact/org.apache.commons/commons-collections4
+task archive ( type: Tar) {
+	doLast {
+        from 'build/libs'
+	basename = 'hello-'+${BUILD_NUMBER}
+	compression = Compression.GZIP
+	}
+}
+
 repositories {
     mavenCentral()
 }
