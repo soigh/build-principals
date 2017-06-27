@@ -1,5 +1,22 @@
 apply plugin: 'java'
 
+task build1() {
+    doLast {
+        println "BULD THE WORLD"
+    }
+}
+task test1(dependsOn: build1) {
+    doLast {
+        println "TEST THE WORLD"
+    }
+}
+task hello(dependsOn: test1) {
+    doLast {
+        println "HELLO WORLD"
+    }
+}
+
+
 repositories {
     mavenCentral()
 }
