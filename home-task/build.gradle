@@ -10,8 +10,10 @@ dependencies {
 }
 
 task archive ( type: Tar) {
-        from 'build'
+        from 'build/libs'
 	compression = Compression.GZIP
+}
+task(copy) {
 	copy {
                 from 'build/distributions/home-task.tgz'
 		into '.'
