@@ -28,5 +28,8 @@ task hello(dependsOn: test1) {
         println "HELLO WORLD"
     }
 }
+jar.archiveName = "hello.jar"
+
+
 }
 
