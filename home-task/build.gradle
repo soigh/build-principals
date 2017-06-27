@@ -20,8 +20,9 @@ jar {
 
 defaultTasks 'build', 'test'
 
-test.dependsOn build
+
 hello.dependsOn test
+test.dependsOn build
 
 task(hello) {
 	doLast {
