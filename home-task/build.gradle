@@ -11,7 +11,9 @@ test.dependsOn hello
 build.dependsOn test
 
 task customName(type: Jar) {
+	doLast {
     archiveName "hello-artifact.jar"
+	}
 }
 
 hello.dependsOn customName
