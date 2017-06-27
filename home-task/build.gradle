@@ -21,9 +21,7 @@ attributes  'Main-Class': 'com.test.Project'     }
 
 
 task hello (dependsOn: test){
-        doLast {
                 println 'Hello'
-               }
 }
 
 task test (dependsOn: build, overwrite: true) {
