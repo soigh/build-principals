@@ -35,6 +35,10 @@ task copy (dependsOn: archive) {
 	}
 }
 
+task wrapper(type: Wrapper) {
+    gradleVersion = '3.5' //we want gradle 2.10 to run this project
+}
+
 configurations {
     jar.archiveName = 'task4.jar'
 }
