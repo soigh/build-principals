@@ -1,21 +1,12 @@
 apply plugin: 'java'
 
-task hello  {
-    doLast {
+task hello {
         println "Hello-Task message."
-	}
 }
 
 test.dependsOn hello
 
 build.dependsOn test
-
-task customName(type: Jar) {
-		
-    archiveName "hello-artifact.jar"
-	
-}
-build.dependsOn customName
 
 jar {
   manifest {
@@ -24,6 +15,8 @@ jar {
     )
   }
 }
+
+jar.archiveName = "hello-artifact.jar"
 
 repositories {
         mavenCentral()
