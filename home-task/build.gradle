@@ -1,14 +1,20 @@
 apply plugin: 'java'
 
-task hello {
+task hello  {
     doLast {
-        println "hello"
-    }
+        println "Hello-Task message."
+	}
 }
 
 test.dependsOn hello
 
 build.dependsOn test
+
+task customName(type: Jar) {
+    archiveName "hello-artifact.jar"
+}
+
+hello.dependsOn customName
 
 jar {
   manifest {
