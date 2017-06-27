@@ -26,27 +26,24 @@
     <packaging>jar</packaging>
     <version>1.0-SNAPSHOT</version>
     <name>maven-home-task</name>
-  <archive>
-    <manifest>
-      <mainClass>com.test.Project</mainClass>
-    </manifest>
-  </archive>
 
-
-<!-- <build>
-    <plugins>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-jar-plugin</artifactId>
-        <version>1.0</version>
-        <extensions>false</extensions>
-        <inherited>true</inherited>
-        <configuration>
-          <classifier>test</classifier>
-        </configuration>
-        <dependencies>...</dependencies>
-        <executions>...</executions>
-      </plugin>
-    </plugins>
-</build> -->
+  <build>
+  <plugins>
+    <plugin>
+      <!-- Build an executable JAR -->
+      <groupId>org.apache.maven.plugins</groupId>
+      <artifactId>maven-jar-plugin</artifactId>
+      <version>3.0.2</version>
+      <configuration>
+        <archive>
+          <manifest>
+            <addClasspath>true</addClasspath>
+            <classpathPrefix>lib/</classpathPrefix>
+            <mainClass>com.test.Project</mainClass>
+          </manifest>
+        </archive>
+      </configuration>
+    </plugin>
+  </plugins>
+  </build>
 </project>
