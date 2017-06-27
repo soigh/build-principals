@@ -1,7 +1,17 @@
 apply plugin:'java'
 apply plugin: 'java-library'
-dependencies {
-      compile group: 'org.apache.logging.log4j', name: 'log4j-api', version: '2.8.2'
-      compile group: 'org.apache.logging.log4j', name: 'log4j-core', version: '2.8.2'
+plugins {
+      id 'io.spring.dependency-management' version '1.0.1.RELEASE'
     }
-
+     
+    dependencyManagement {
+      imports {
+        mavenBom 'org.apache.logging.log4j:log4j-bom:2.8.2'
+      }
+    }
+     
+    dependencies {
+      compile 'org.apache.logging.log4j:log4j-api'
+      compile 'org.apache.logging.log4j:log4j-core'
+      // etc.
+    }
