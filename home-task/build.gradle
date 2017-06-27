@@ -8,12 +8,14 @@ dependencies {
     testCompile group: 'junit', name: 'junit', version: '4.+'
 }
 build{ 
-    println 'build'       
-}
+    doLast{println 'build'}
+}       
 task test (dependsOn: build, overwrite: true){
-    println 'running unit tests'}        
+doLast{println 'running unit tests'}
+}        
 task hello (dependsOn: test){
-        println 'hello'}
+doLast{println 'hello'}
+}
 jar {
     manifest {
         attributes 'Main-Class': 'com.test.Project'
