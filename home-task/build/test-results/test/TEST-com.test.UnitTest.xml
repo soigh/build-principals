@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.test.UnitTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2017-06-27T12:58:23" hostname="jenkins" time="0.005">
+<testsuite name="com.test.UnitTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2017-06-27T14:00:13" hostname="jenkins" time="0.004">
   <properties/>
-  <testcase name="testAppHasAGreeting" classname="com.test.UnitTest" time="0.004"/>
+  <testcase name="testAppHasAGreeting" classname="com.test.UnitTest" time="0.003"/>
   <testcase name="test" classname="com.test.UnitTest" time="0.001"/>
   <system-out><![CDATA[test
 ]]></system-out>
