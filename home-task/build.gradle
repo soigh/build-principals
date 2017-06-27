@@ -9,16 +9,6 @@ task hello {
 build.dependsOn test
 test.dependsOn hello
 
-task archive ( type: Tar) {
-	doLast {
-        from 'build/libs'
-	//basename = 'hello-'+"${BUILD_NUMBER}"
-	compression = Compression.GZIP
-	}
-}
-
-hello.dependsOn archive
-
 repositories {
     mavenCentral()
 }
