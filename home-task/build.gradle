@@ -1,16 +1,13 @@
 apply plugin: 'java'
 
-
-defaultTasks 'hello'
-
 task hello {
     doLast {
         println "Hello from task!"
     }
 }
 
-test.dependsOn build
-hello.dependsOn test
+build.dependsOn test
+test.dependsOn hello
 
 // https://mvnrepository.com/artifact/org.apache.commons/commons-collections4
 repositories {
