@@ -19,15 +19,22 @@ attributes  'Main-Class': 'com.test.Project'     }
 
 }
 
+task test (dependsOn: build, overwrite: true) {
+            doLast {
+                println 'Test phase'
+                  }
+
+}
+
+
 
 task hello (dependsOn: test){
+         doLast {
                 println 'Hello'
+                }
 }
 
-task test (dependsOn: build, overwrite: true) {
-                println 'Test phase'
                
-}
 
 
 
