@@ -10,6 +10,13 @@ task test (dependsOn: build, overwrite: true) {
 		println "My test!"
 		}
 }
+task archive ( type: Tar) {
+	doLast {
+	from 'build/libs'
+	compression = Compression.GZIP
+	}
+}
+
 repositories {
     mavenCentral()
 }
