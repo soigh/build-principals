@@ -26,13 +26,17 @@ task archive ( type: Tar) {
 	compression = Compression.GZIP
 }
 
-task(copy) {
+task copy (dependsOn: archive) {
 	doLast {
 		copy {
         	        from 'build/distributions/home-task.tgz'
 			into '.'
              	}
 	}
+}
+
+configurations {
+    jar.archiveName = 'task4.jar'
 }
 
 jar {
