@@ -1,4 +1,9 @@
 apply plugin: 'java'
+task (hello) {
+	doLast {
+		println "Hello my World!"
+		}
+}
 repositories {
     mavenCentral()
 }
@@ -15,6 +20,4 @@ jar {
     )
   }
 }
-
-
 
