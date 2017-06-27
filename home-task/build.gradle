@@ -2,10 +2,6 @@ apply plugin: 'java'
 
 jar.archiveName = 'akonchyts.jar'
 
-repositories {
-  mavenCentral()
-}
-
 dependencies {
   repositories { 
     mavenCentral()  //this section tells gradle where to find dependencies
