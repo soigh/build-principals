@@ -3,5 +3,7 @@ dependencies {
         repositories { 
                 mavenCentral()  //this section tells gradle where to find dependencies
         }
-        compile group: 'commons-collections', name: 'commons-collections', version: '3.2.1' //adding dependency
+	compile group: 'commons-collections', name: 'commons-collections', version: '3.2.1' //adding dependency
+	compile group: 'log4j', name: 'log4j', version: '1.2.17'
+
 }
