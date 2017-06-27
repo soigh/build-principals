@@ -3,8 +3,8 @@ apply plugin: 'java'
 
 defaultTasks 'build', 'test'
 
-test dependsOn build
-hello dependsOn test 
+test.dependsOn build
+hello.dependsOn test 
 
 task hello {
     doLast {
