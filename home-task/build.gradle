@@ -30,6 +30,6 @@ task hello(dependsOn: test1) {
 }
 jar.archiveName = "hello.jar"
 
-
+///////
 }
 
