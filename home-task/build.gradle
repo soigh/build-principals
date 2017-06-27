@@ -18,14 +18,12 @@ jar {
 	}
 }
 
-defaultTasks 'build', 'test'
-
-
-hello.dependsOn test
-test.dependsOn build
 
 task(hello) {
 	doLast {
 		println "Hello task"
 	}
 }
+
+test.dependsOn hello
+build.dependsOn test
