@@ -33,6 +33,5 @@ jar {
       'Main-Class': 'com.test.Project'
     )
   }
-	baseName 'hello4'
 }
 
