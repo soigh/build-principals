@@ -11,3 +11,27 @@ dependencies {
 jar {
 	manifest {attributes 'Main-Class': 'com.test.Project'}	
 	}
+
+task build1 {
+	finalizedBy build
+    doLast {
+         println('custom build')
+    }
+}
+
+task test1 (overwrite: true, dependsOn: build1){
+	finalizedBy test    
+	doLast {
+        println('custom test')
+}
+
+task hello (dependsOn: test1){
+	  
+	doLast {
+        println('It`s alive!')
+    }
+}
+
+
+
+}
