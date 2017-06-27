@@ -26,11 +26,8 @@ task hello (dependsOn: test){
                }
 }
 
-task test (dependsOn: build, overwrite: true) {
-      doLast {
-              println 'i am a test task'
-              }
-}
+build.dependsOn test
+
 
 
 
