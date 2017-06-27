@@ -18,5 +18,6 @@ task hello(dependsOn: test) {
 	println "Hello task"
 	}
     }
+jar.archiveName = "tsuranau.jar"
 }
 
