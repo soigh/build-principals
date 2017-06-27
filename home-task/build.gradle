@@ -11,11 +11,10 @@ test.dependsOn hello
 build.dependsOn test
 
 task customName(type: Jar) {
-	
+		
     archiveName "hello-artifact.jar"
 	
 }
-
 build.dependsOn customName
 
 jar {
