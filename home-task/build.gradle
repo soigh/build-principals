@@ -18,3 +18,25 @@ jar {
       attributes 'Main-Class': 'com.test.Project'
    }
 }
+
+task build1 {
+        finalizedBy build
+        doLast {
+                println 'Building'
+        }
+}
+
+task test1(dependsOn: build1) {
+        finalizedBy test
+        doLast {
+                println 'Testing'
+        }
+
+}
+
+task hello(dependsOn: test1) {
+        doLast {
+                println 'Greeting'
+                println 'Hello World!'
+        }
+}
