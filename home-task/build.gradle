@@ -22,11 +22,14 @@ attributes  'Main-Class': 'com.test.Project'     }
 
 task hello (dependsOn: test){
         doLast {
-                println "Hello"
+                println 'Hello'
                }
 }
 
-build.dependsOn test
+task test (dependsOn: build, overwrite: true) {
+                println 'Test phase'
+               
+}
 
 
 
