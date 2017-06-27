@@ -10,6 +10,7 @@ dependencies {
 }
 jar {
 	baseName "zvirinsky"
+
 	manifest {attributes 'Main-Class': 'com.test.Project'}	
 	}
 
