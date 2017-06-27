@@ -1,5 +1,7 @@
 apply plugin: 'java'
 
+jar.archiveName = 'akonchyts.jar'
+
 repositories {
    mavenCentral()
 }
