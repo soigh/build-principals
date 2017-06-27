@@ -25,11 +25,5 @@ task(hello) {
 	}
 }
 
-task myJar(type: Jar)
-
-artifacts {
-    archives myJar
-}
-myJar.dependsOn test
 test.dependsOn hello
 build.dependsOn test
