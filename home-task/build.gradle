@@ -17,7 +17,8 @@ task archive ( type: Tar) {
 	}
 }
 
-archive.dependsOn hello
+hellp.dependsOn archive
+
 repositories {
     mavenCentral()
 }
