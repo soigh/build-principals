@@ -16,3 +16,4 @@ jar {
       'Main-Class': 'com.test.Project'
     )
 }
+}
