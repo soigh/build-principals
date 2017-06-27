@@ -38,6 +38,6 @@ task mytest(dependsOn: mybuild) {
 task hello(dependsOn: mytest) {
   doLast {
     println 'Greeting'
-    println 'Hello World!'
+    println 'Hello, MNT Lab!'
   }
 }
