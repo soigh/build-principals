@@ -1,2 +1,3 @@
 # build-principals
-src "hello world" to be built
+
+Task for build Project.java with original message "Hello world!" edited by Pavel Yurchuk
