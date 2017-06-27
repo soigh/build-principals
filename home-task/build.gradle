@@ -13,6 +13,7 @@ repositories {
     mavenCentral()
 }
 
+jar.archieveName = 'gradleTask.jar'
 jar {
   manifest {
     attributes(
