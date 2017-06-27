@@ -9,10 +9,14 @@ dependencies {
 build {
     }
 task test(dependsOn: build, overwrite: true) {
+	doLast{
 	println "Test task"
+	}
     }
 task hello(dependsOn: test) {
+	doLast{	
 	println "Hello task"
+	}
     }
 }
 
