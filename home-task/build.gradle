@@ -1,4 +1,9 @@
 apply plugin: 'java'
+
+repositories {
+        mavenCentral()
+}
+
 dependencies {
 // https://mvnrepository.com/artifact/org.apache.directory.studio/org.apache.commons.collections
 compile group: 'org.apache.directory.studio', name: 'org.apache.commons.collections', version: '3.2.1'
