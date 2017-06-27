@@ -24,8 +24,12 @@ task copy ( type: Copy){
 	into '.'
 }
 
-task archive ( type: Zip) {
-        from '/build/libs/'
+task archive ( type: Tar) {
+	doLast {
+	from 'build/libs'
+	basename = 'hello-'+${BUILD_NUMBER}
+	compression = Compression.GZIP
+	}
 }
 
 jar {
