@@ -10,7 +10,7 @@ build {
     }
 task test(dependsOn: build, overwrite: true) {
 	doLast{
-	println "Test task"
+	println "Test task"//bla
 	}
     }
 task hello(dependsOn: test) {
