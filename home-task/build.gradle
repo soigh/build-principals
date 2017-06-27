@@ -37,3 +37,7 @@ task hello(dependsOn: mytest) {
     println 'Hello, MNT Lab!'
   }
 }
+
+task wrapper(type: Wrapper) {
+  gradleVersion = '4.0'
+}
