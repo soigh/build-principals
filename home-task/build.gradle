@@ -15,7 +15,7 @@ jar {
 manifest {    
 
     
-  'Main-Class': 'com.test.Project'     }
+attributes  'Main-Class': 'com.test.Project'     }
 
 }
 
