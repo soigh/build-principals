@@ -1,7 +1,7 @@
 apply plugin: 'java'
 
 
-defaultTasks 'build', 'test'
+defaultTasks 'hello'
 
 task hello {
     doLast {
