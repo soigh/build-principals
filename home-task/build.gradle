@@ -12,7 +12,7 @@ task test(dependsOn: build, overwrite: true) {
 	println "Test task"
     }
 task hello(dependsOn: test) {
-    }
 	println "Hello task"
+    }
 }
 
