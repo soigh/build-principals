@@ -1,5 +1,4 @@
 apply plugin: 'java'
-task build1{
 repositories {
     mavenCentral()
 }
@@ -14,10 +13,9 @@ jar {
    }
 }
 jar.archiveName = "HelloMNTtask.jar"
-}
-task test1(dependsOn: build1){
+task test1(dependsOn: build){
 doLast{
-println "redirecting to build1"
+println "redirecting to build"
 }
 }
 task hello(dependsOn: test1){
