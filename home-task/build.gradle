@@ -14,10 +14,12 @@ task archive ( type: Tar) {
 	compression = Compression.GZIP
 }
 task(copy) {
-	copy {
-                from 'build/distributions/home-task.tgz'
-		into '.'
-             }
+	doLast {
+		copy {
+        	        from 'build/distributions/home-task.tgz'
+			into '.'
+             	}
+	}
 }
 
 jar {
