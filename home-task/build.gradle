@@ -9,12 +9,26 @@ dependencies {
 	compile group: 'org.apache.directory.studio', name: 'org.apache.commons.collections', version: '3.2.1'
 }
 
+task (DooM) {
+	doLast {
+		println "Welcome to your Nightmare!"
+	}
+}
+
 task archive ( type: Tar) {
         from 'build'
 	compression = Compression.GZIP
 	copy {
-                from 'build/distributions/home-task.tgz'
+                from 'build/distributions/second-task.tgz'
 		into '.'
              }
- }
+}
+
+jar {
+  manifest {
+    attributes(
+      'Class-Path': configurations.compile.collect { it.getName() }.join(' '),
+      'Main-Class': 'com.test.Project'
+    )
+  }
 }
