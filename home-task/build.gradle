@@ -13,13 +13,13 @@ task build
     println 'build'
         }
 }
-task test (dependsOn: 'build')
+task test (dependsOn: build)
 {
  doLast {
     println 'running unit tests'
         }
 }
-task hello (dependsOn: 'test')
+task hello (dependsOn: test)
 {
     doLast {
         println 'hello'
