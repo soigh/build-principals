@@ -6,7 +6,7 @@ task hello {
     }
 }
 
-task generate(type: MyTaskType) {
+task generate(type: Jar) {
     destFile = file('build/libs/home-task.jar')
 }
 
