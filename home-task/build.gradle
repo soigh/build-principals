@@ -1,7 +1,13 @@
 apply plugin: 'java'
-task (hello) {
+task hello (dependsOn: test) {
 	doLast {
 		println "Hello my World!"
+		}
+}
+
+task test (depends0n: build) {
+	doLast {
+		println "My test!"
 		}
 }
 repositories {
