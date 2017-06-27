@@ -1,4 +1,4 @@
-apply plugin:'java'
+apply plugin: 'java'
 dependencies {
         repositories { 
                 mavenCentral()  //this section tells gradle where to find dependencies
