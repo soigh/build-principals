@@ -34,8 +34,17 @@ dependencies {
 jar {
    manifest {
       attributes(
-//         "Class-Path": lib,
          "Main-Class": 'com.test.Project'
       )
    }
+}
+task test(dependsOn: 'build', overwrite: true) {
+  doLast {
+    println 'Test.'
+  }
+}
+task hello(dependsOn: 'test') {
+  doLast {
+    println 'Hello!'
+  }
 }
