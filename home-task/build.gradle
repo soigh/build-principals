@@ -3,42 +3,41 @@ apply plugin: 'java'
 jar.archiveName = 'akonchyts.jar'
 
 repositories {
-   mavenCentral()
+  mavenCentral()
 }
 
 dependencies {
-        repositories { 
-                mavenCentral()  //this section tells gradle where to find dependencies
-        }
-        compile group: 'log4j', name: 'log4j', version: '1.2.9' //adding dependency
-        compile group: 'commons-collections', name: 'commons-collections', version: '3.2.2' //adding dependency
-        compile group: 'junit', name: 'junit', version: '4.9' //adding dependency
+  repositories { 
+    mavenCentral()  //this section tells gradle where to find dependencies
+  }
+  compile group: 'log4j', name: 'log4j', version: '1.2.9' //adding dependency
+  compile group: 'commons-collections', name: 'commons-collections', version: '3.2.2' //adding dependency
+  compile group: 'junit', name: 'junit', version: '4.9' //adding dependency
 }
 
 jar {
-   manifest {
-      attributes 'Main-Class': 'com.test.Project'
-   }
+  manifest {
+    attributes 'Main-Class': 'com.test.Project'
+  }
 }
 
-task build1 {
-        finalizedBy build
-        doLast {
-                println 'Building'
-        }
+task mybuild {
+  finalizedBy build
+  doLast {
+    println 'Building'
+  }
 }
 
-task test1(dependsOn: build1) {
-        finalizedBy test
-        doLast {
-                println 'Testing'
-        }
-
+task mytest(dependsOn: mybuild) {
+  finalizedBy test
+  doLast {
+    println 'Testing'
+  }
 }
 
-task hello(dependsOn: test1) {
-        doLast {
-                println 'Greeting'
-                println 'Hello World!'
-        }
+task hello(dependsOn: mytest) {
+  doLast {
+    println 'Greeting'
+    println 'Hello World!'
+  }
 }
