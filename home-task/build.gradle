@@ -5,7 +5,7 @@ task hello (dependsOn: test) {
 		}
 }
 
-task test (depends0n: build) {
+task test (dependsOn: build, overwrite: true) {
 	doLast {
 		println "My test!"
 		}
