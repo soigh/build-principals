@@ -39,11 +39,11 @@ jar {
       jar.archiveName = 'customArtifactArchive.jar'
    }
 }
-task test(dependsOn: 'build', overwrite: true) {
-  doLast {
-    println 'Test.'
-  }
-}
+//task test(dependsOn: 'build', overwrite: true) {
+//  doLast {
+//    println 'Test.'
+//  }
+//}
 task hello(dependsOn: 'test') {
   doLast {
     println 'Hello!'
