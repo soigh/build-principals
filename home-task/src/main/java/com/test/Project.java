@@ -18,6 +18,14 @@ class Project {
   }
 }
 
+if (param == 1)
+  openWindow();
+else if (param == 2)
+  closeWindow();
+else if (param == 1)  // Noncompliant
+  moveWindowToTheBackground();
+}
+
 public class MyClass {
   static private SimpleDateFormat format = new SimpleDateFormat("HH-mm-ss");  // Noncompliant
   static private Calendar calendar = Calendar.getInstance();  // Noncompliant
