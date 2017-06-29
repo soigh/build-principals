@@ -6,14 +6,6 @@ import org.apache.log4j.Logger;
 
 class Project {
 
-if (param == 1)
-  openWindow();
-else if (param == 2)
-  closeWindow();
-else if (param == 1)  // Noncompliant
-  moveWindowToTheBackground();
-}
- 
   
  public String getGreeting() {
         return "Hello, MNT Lab!";
@@ -25,6 +17,13 @@ else if (param == 1)  // Noncompliant
 
  public static void main(String[] args) {
     System.out.println(new Project().getGreeting());
+   if (param == 1)
+  openWindow();
+else if (param == 2)
+  closeWindow();
+else if (param == 1)  // Noncompliant
+  moveWindowToTheBackground();
+}
   }
 }
 
