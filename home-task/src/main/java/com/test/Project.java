@@ -3,24 +3,6 @@ package com.test;
 import org.apache.commons.collections.Predicate;
 import org.apache.log4j.Logger;
 
-/**
- * @deprecated  As of release 1.3, replaced by {@link #Fee}
- */@Deprecated
-class Fum { 
-  public void myMethod() {
-    Foo foo = new Foo();  // okay; the class isn't deprecated
-    foo.doTheThing();  // Noncompliant
-  }
-}
-
-class Bar extends Fum {  // Noncompliant; Fum is deprecated
-
-  public void myMethod() {
-    Foo foo = new Foo();  // okay; the class isn't deprecated
-    foo.doTheThing();  // Noncompliant
-  }
-}
-
 class Project {
 
  public String getGreeting() {
