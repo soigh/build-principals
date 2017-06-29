@@ -13,6 +13,10 @@ class Project {
     System.out.println("test");
   }
 
+ public static void main () {
+  double b= sin(0.0);
+ }
+ 
   public static void main(String[] args) {
     System.out.println(new Project().getGreeting());
    return 42;
