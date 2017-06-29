@@ -16,7 +16,5 @@ class Project {
   public static void main(String[] args) {
     System.out.println(new Project().getGreeting());
   }
- public void setName(String name) {
-  name = name;
-}
+
 }
