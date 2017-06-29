@@ -14,6 +14,8 @@ class Project {
   }
 
   public static void main(String[] args) {
+     public static final String [] HEIRS = new String [] { 
+    "Betty", "Suzy" };
     System.out.println(new Project().getGreeting());
   }
 }
