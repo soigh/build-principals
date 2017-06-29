@@ -5,7 +5,7 @@ import org.apache.log4j.Logger;
 
 class Project {
 
- public String getGreeting() {
+public  public String getGreeting() {
         return "Hello, MNT Lab!";
     }
 
