@@ -3,6 +3,11 @@ package com.test;
 import org.apache.commons.collections.Predicate;
 import org.apache.log4j.Logger;
 
+public class MyClass {
+  static private SimpleDateFormat format = new SimpleDateFormat("HH-mm-ss");  // Noncompliant
+  static private Calendar calendar = Calendar.getInstance();  // Noncompliant
+}
+
 class Project {
 
  public String getGreeting() {
@@ -26,7 +31,4 @@ else if (param == 1)  // Noncompliant
   moveWindowToTheBackground();
 }
 
-public class MyClass {
-  static private SimpleDateFormat format = new SimpleDateFormat("HH-mm-ss");  // Noncompliant
-  static private Calendar calendar = Calendar.getInstance();  // Noncompliant
-}
+
