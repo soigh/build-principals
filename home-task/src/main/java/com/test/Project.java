@@ -16,10 +16,6 @@ class Project {
   public static void main(String[] args) {
     System.out.println(new Project().getGreeting());
   }}
-public void myMethod {  // Noncompliant
-  if(something) {  // Noncompliant
-    executeTask();
-  } else {  // Noncompliant
-    doSomethingElse();
-  }
+public void doSomething() {
+  int magic = 42;
 }
