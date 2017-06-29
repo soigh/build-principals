@@ -3,9 +3,9 @@ package com.test;
 import org.apache.commons.collections.Predicate;
 import org.apache.log4j.Logger;
 
-class Project {
+class Projectasd 123123{
 
- public String getGreeting() {
+ public String getasdGreeting() {
         return "Hello, MNT Lab!";
     }
 
