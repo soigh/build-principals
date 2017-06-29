@@ -6,7 +6,12 @@ import org.apache.log4j.Logger;
 /**
  * @deprecated  As of release 1.3, replaced by {@link #Fee}
  */@Deprecated
-class Fum { }
+class Fum { 
+  public void myMethod() {
+    Foo foo = new Foo();  // okay; the class isn't deprecated
+    foo.doTheThing();  // Noncompliant
+  }
+}
 
 public class Bar extends Fum {  // Noncompliant; Fum is deprecated
 
