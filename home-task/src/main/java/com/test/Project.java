@@ -17,5 +17,7 @@ class Project {
      public static final String [] HEIRS = new String [] { 
     "Betty", "Suzy" };
     System.out.println(new Project().getGreeting());
+   for (int i = 0; i < 20; i--) { 
+  }
   }
 }
