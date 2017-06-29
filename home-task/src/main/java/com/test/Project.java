@@ -13,7 +13,7 @@ class Fum {
   }
 }
 
-public class Bar extends Fum {  // Noncompliant; Fum is deprecated
+class Bar extends Fum {  // Noncompliant; Fum is deprecated
 
   public void myMethod() {
     Foo foo = new Foo();  // okay; the class isn't deprecated
