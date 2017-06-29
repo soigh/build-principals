@@ -14,4 +14,17 @@ class Project {
 
   public static void main(String[] args) {
     System.out.println(new Project().getGreeting());
+   
+
+   if (param == 1)
+  openWindow();
+else if (param == 2)
+  closeWindow();
+else if (param == 1)  // Noncompliant
+  moveWindowToTheBackground();
+}
+   
+   
+   
+   
   }}
