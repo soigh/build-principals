@@ -7,6 +7,7 @@ class Project {
 
  public String getGreeting() {
         return "Hello, MNT Lab!";
+        while(true){char c='q';}
     }
 
   public static void test() {
