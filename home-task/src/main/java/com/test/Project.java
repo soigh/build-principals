@@ -6,11 +6,6 @@ import org.apache.log4j.Logger;
 class Project {
 
  public String getGreeting() {
-        int a = 1;
-        while(true)
-        {
-          a++;
-        }
         return "Hello, MNT Lab!";
     }
 
