@@ -8,16 +8,12 @@ class Project {
  public String getGreeting() {
         return "Hello, MNT Lab!";
     }
-public String getGreeting() {
-        return "Hello";
-    }
- public String getGreeting() {
-        return "sonar!";
-    }
   public static void test() {
     System.out.println("test");
   }
-
+ public static void test() {
+    System.out.println("sonar");
+  }
   public static void main(String[] args) {
     System.out.println(new Project().getGreeting());
   }
