@@ -37,15 +37,6 @@
        <artifactId>junit</artifactId>
        <version>4.4</version>
        <scope>test</scope>
-     </dependency>
-     <dependency>
-      <groupId>com.foobar.templates</groupId>
-      <artifactId>maventemplate-ear</artifactId>
-      <version>${distversion}</version>
-      <type>ear</type>
-    </dependency>
-
-
 
     </dependencies>
  <build>
