@@ -62,6 +62,7 @@
 <LI>Add session data using the form. Upon pressing ADD SESSION DATA, the current session data will be listed.</LI>
 <LI>Click on RELOAD PAGE to display the current session data without adding new data.</LI>
 <LI>Click on CLEAR SESSION to invalidate the current session.</LI>
+<LI>New added message - 4.07.2017 15:14</LI>
 </UL>
 
 </BODY>
