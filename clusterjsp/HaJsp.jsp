@@ -64,6 +64,7 @@
 <LI>Click on CLEAR SESSION to invalidate the current session.</LI>
 <LI>New added message - 4.07.2017 15:14</LI>
 <LI>New message 15:18</LI>
+<LI>New message 15:43</LI>
 </UL>
 
 </BODY>
