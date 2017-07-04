@@ -6,8 +6,8 @@ After=network-online.target
 [Service]
 Type=simple
 
-ExecStart=$NEXUS_DIR/nexus
-User=nexus 
+ExecStart=/opt/nexus/bin/nexus
+User=vagrant 
 
 [Install]
 WantedBy=multi-user.target
