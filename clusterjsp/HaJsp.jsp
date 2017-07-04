@@ -63,6 +63,7 @@
 <LI>Click on RELOAD PAGE to display the current session data without adding new data.</LI>
 <LI>Click on CLEAR SESSION to invalidate the current session.</LI>
 <LI>New added message - 4.07.2017 15:14</LI>
+<LI>New message 15:18</LI>
 </UL>
 
 </BODY>
