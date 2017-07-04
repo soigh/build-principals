@@ -1,0 +1,14 @@
+[Unit]
+Description=Tomcat Server Daemon
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+Type=simple
+
+ExecStart=/opt/tomcat/bin/startup.sh
+ExecStop=/opt/tomcat/bin/shutdown.sh
+User=vagrant 
+
+[Install]
+WantedBy=multi-user.target
