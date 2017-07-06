@@ -6,7 +6,7 @@ After=network-online.target
 [Service]
 Type=simple
 
-ExecStart=/opt/nexus/bin/nexus start
+ExecStart=/opt/nexus/bin/nexus run
 User=vagrant 
 
 [Install]
