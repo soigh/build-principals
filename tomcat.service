@@ -4,10 +4,9 @@ Wants=network-online.target
 After=network-online.target
 
 [Service]
-Type=simple
+Type=forking
 
 ExecStart=/opt/tomcat/bin/startup.sh
-ExecStop=/opt/tomcat/bin/shutdown.sh
 User=vagrant 
 
 [Install]
