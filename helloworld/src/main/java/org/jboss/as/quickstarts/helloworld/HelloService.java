@@ -25,7 +25,7 @@ package org.jboss.as.quickstarts.helloworld;
 public class HelloService {
 
     String createHelloMessage(String name) {
-        return "Hello " + name + "! Deployed by Jenkins Second";
+        return "Hello " + name + "! Deployed by Jenkins Third";
     }
 
 }
