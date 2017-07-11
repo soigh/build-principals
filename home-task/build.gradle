@@ -1,0 +1,46 @@
+apply plugin: 'java'
+
+dependencies {
+        repositories { 
+                mavenCentral()
+        }
+        compile group: 'junit', name: 'junit', version: '4.4' 
+	compile group: 'log4j', name: 'log4j', version: '1.2.17'
+	compile group: 'org.apache.directory.studio', name: 'org.apache.commons.collections', version: '3.2.1'
+}
+
+task hello (dependsOn: test){
+	doLast {
+		println "Welcome to your Nightmare!"
+	}
+}
+
+task test (dependsOn: build, overwrite: true){
+	println "Testin 1,2,3"
+}
+
+task copy ( type: Copy){
+	from '/build/lib/'
+	into '.'
+}
+
+task archive ( type: Tar) {
+	doLast {
+	from 'build/libs'
+	basename = 'hello-'+${BUILD_NUMBER}
+	compression = Compression.GZIP
+	}
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '2.0'
+}
+
+jar {
+  manifest {
+    attributes(
+      'Class-Path': configurations.compile.collect { it.getName() }.join(' '),
+      'Main-Class': 'com.test.Project'
+    )
+  }
+}
