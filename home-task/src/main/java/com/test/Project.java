@@ -17,4 +17,3 @@ class Project {
     System.out.println(new Project().getGreeting());
   }
 }
-}
