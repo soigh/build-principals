@@ -33,7 +33,7 @@
     <distributionManagement>
       <snapshotRepository>
         <id>NXRMOSS3.18.1-01</id>
-        <url>http://jenkinsos:8081/repository/maven-napshots/</url>
+        <url>http://jenkinsos:8081/repository/maven-snapshots/</url>
       </snapshotRepository>
     </distributionManagement>
 
